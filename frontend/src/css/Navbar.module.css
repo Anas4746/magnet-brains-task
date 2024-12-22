@@ -1,0 +1,44 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    /* border: 2px solid black; */
+    height: 14vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2b7c82;
+}
+
+.container{
+    /* border: 2px solid red; */
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.user{
+    /* border: 2px solid green; */
+    width: 18%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Signup,.login, .logout{
+    border: none;
+    background-color: rgba(39, 39, 236, 0.842);
+    color: white;
+    width: 40%;
+    height: 90%;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,83 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.taskContainer{
+    /* border: 2px solid green; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: auto;
+    gap: 5px;
+    background-color: rgb(43 130 46 / 51%);
+}
+.taskDiv{
+    /* border: 2px solid red; */
+    width: 90%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-evenly;
+    height: auto;
+}
+
+.immediate, .soon, .later{
+    /* border: 2px solid pink; */
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    border-radius: 5px;
+    gap: 7px;
+    padding: 2%;
+}
+
+h2{
+    text-align: center;
+}
+
+.taskContain{
+    /* border: 2px solid blue; */
+    /* height: 80%; */
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.taskContain1{
+    background-color: rgb(255 126 126 / 72%);
+}
+.taskContain2{
+    background-color: #fff06ccf;
+}
+.taskContain3{
+    background-color:rgb(43 130 46 / 49%);
+}
+
+.taskCard{
+    /* border: 2px solid black; */
+    height: 25vh;
+    width: 48%;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    box-shadow: 4px 4px 15px 1px;
+}
+
+.taskCard{
+    cursor: pointer;
+}
+
+.plus{
+    color: white;
+}
