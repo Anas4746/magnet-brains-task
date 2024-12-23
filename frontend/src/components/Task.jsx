@@ -10,6 +10,7 @@ import TaskList from './TaskList'
 function Task() {
 
     let {taskList, getTask} = useContext(TaskContext)
+    let [mytask, setmyTask] = useState(taskList)
     let navigate = useNavigate()
     let lowTasks = []
     let mediumTasks = []
@@ -18,6 +19,11 @@ function Task() {
     if(!localStorage.getItem('token')){
       navigate('/login')
     }
+
+    useEffect(() => {
+      setmyTask(taskList);
+    }, [taskList]);
+
     useEffect(()=>{
       getTask()
     },[])
@@ -38,7 +44,7 @@ function Task() {
       navigate('/addtask')
     }
 
-    // console.log(lowTasks, highTasks, mediumTasks);
+    console.log(lowTasks, highTasks, mediumTasks);
 
   return (
     <>

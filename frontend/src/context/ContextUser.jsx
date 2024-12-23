@@ -35,6 +35,7 @@ function UserState(props) {
                 {email, password}
             )
             console.log(data); 
+            return data
         }
         catch(err){
             if (err.response?.data?.message){

@@ -8,13 +8,9 @@ import cors from "cors"
 
 let app = express()
 
-let corsOptions = {
-    origin: 'http://localhost:5173', // Allow only this origin
-    methods: 'GET,POST,PUT,DELETE', // Allow these HTTP methods
-    allowedHeaders: 'Content-Type,Authorization' // Allow these headers
-}
-
 app.use(cors())
+
+let PORT = process.env.PORT || 9000
 
 app.options('*', cors());
 
@@ -34,6 +30,6 @@ mongoose.connect("mongodb://127.0.0.1:27017/taskdb")
         console.log({ err, message: err.message })
     })
 
-app.listen(9000, () => {
+app.listen(PORT, () => {
     console.log("App running on 9000 PORT")
 })

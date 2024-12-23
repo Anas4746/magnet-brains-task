@@ -19,7 +19,7 @@ function Login() {
         // getUser(email, pass, cpass)
         let userData = await loginUser(email, password)
         console.log(userData);
-        if(userData.message){
+        if(userData?.message){
             if(userData.message == "No User found with this given email"){
                 return setError("email", {
                     type: "manual",
@@ -28,14 +28,14 @@ function Login() {
             }
             setError("password", {
                     type: "manual",
-                    message: userData.message,
+                    message: userData?.message,
             })
             return setError("email", {
                     type: "manual",
-                    message: userData.message,
+                    message: userData?.message,
             })
         }
-        localStorage.setItem('token',userData.data)
+        localStorage.setItem('token',userData?.data)
         navigate('/getTask')
     }
 
