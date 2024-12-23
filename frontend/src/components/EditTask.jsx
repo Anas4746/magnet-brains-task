@@ -49,8 +49,11 @@ function EditTask() {
 
 
   let Taskdelete = ()=>{
-    deleteTask(task._id)
-    navigate('/getTask')
+    let deletetask = confirm("Are you sure you want to delete task ?")
+    if(deletetask){
+      deleteTask(task._id)
+      navigate('/getTask')
+    }
   }
   
 
@@ -141,7 +144,7 @@ function EditTask() {
         <button type="submit" className={Style.submit_button}>
           Update Task
         </button>
-        <button onClick={Taskdelete} className={Style.submit_button} style={{"backgroundColor":"#dc3545","marginTop":"5px"}}>
+        <button type="button" onClick={Taskdelete} className={Style.submit_button} style={{"backgroundColor":"#dc3545","marginTop":"5px"}}>
           Delete Task
         </button>
       </form>
