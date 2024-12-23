@@ -11,6 +11,7 @@ let app = express()
 app.use(cors())
 
 let PORT = process.env.PORT || 9000
+let MONGO_URI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/taskdb"
 
 app.options('*', cors());
 
@@ -23,7 +24,7 @@ app.use("*", (req, res) => {
     res.status(401).json({ error: true, message: "Page not found." })
 })
 
-mongoose.connect("mongodb://127.0.0.1:27017/taskdb")
+mongoose.connect(MONGO_URI)
     .then((data) => {
         console.log("Connect with MongoDB")
     }).catch((err) => {
