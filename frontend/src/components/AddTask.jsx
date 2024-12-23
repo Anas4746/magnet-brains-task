@@ -22,6 +22,10 @@ function AddTask() {
     navigate('/getTask')
   };
 
+  let navigategetTask = ()=>{
+    navigate('/getTask')
+  }
+
   return (
     <div className={Style.form_container}>
       <form onSubmit={handleSubmit(onSubmit)} className={Style.task_form}>
@@ -76,7 +80,7 @@ function AddTask() {
           {errors.priority && <p className={Style.error}>{errors.priority.message}</p>}
         </div>
 
-        <div className={Style.form_group}>
+        {/* <div className={Style.form_group}>
           <label htmlFor="status" className={Style.form_label}>Status</label>
           <select
             id="status"
@@ -87,10 +91,13 @@ function AddTask() {
             <option value="pending">Pending</option>
             <option value="completed">Completed</option>
           </select>
-          {errors.status && <p className={Style.error}>{errors.status.message}</p>}
-        </div>
+         {errors.status && <p className={Style.error}>{errors.status.message}</p>}
+        </div> */}
 
         <button type="submit" className={Style.submit_button}>Submit</button>
+        <button onClick={navigategetTask} className={Style.submit_button} style={{"backgroundColor":"#0d6efd","marginTop":"5px"}}>
+                  Go to TaskList
+        </button>
       </form>
     </div>
   );
