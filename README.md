@@ -14,6 +14,7 @@ Technologies Used:
 Others:Express,Mongoose, Axios, react-hook-form, jwt, bcrypt ect.
 
 Installation =>
+
                 Clone the repository:
                 git clone <repository-url>
                 
