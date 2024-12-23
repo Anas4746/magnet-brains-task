@@ -15,17 +15,17 @@ Others:Express,Mongoose, Axios, react-hook-form, jwt, bcrypt ect.
 
 Installation =>
 
-                Clone the repository:
+                1.Clone the repository:
                 git clone <repository-url>
                 
-                Navigate to the project folder:
+                2.Navigate to the project folder:
                 cd project-folder-name
                 
-                Install dependencies:
+                3.Install dependencies:
                 cd frontend && npm install
                 cd backend && npm install
                 
-                Start the development server:
+                4.Start the development server:
                 (move to frontend folder if you are not) cd frontend 
                 npm run both
 
